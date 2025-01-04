@@ -1,0 +1,70 @@
+# Dependências do Node.js
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Diretórios de build
+dist/
+build/
+
+# Arquivos de ambiente
+.env
+.env.local
+.env.*.local
+
+# Cache do npm e Yarn
+.npm/
+.yarn/
+.yarn-integrity
+.pnp.*
+
+# Cache do ESLint
+.eslintcache
+
+# Cache do TypeScript
+*.tsbuildinfo
+
+# Cache do Webpack e Parcel
+.cache/
+.parcel-cache/
+
+# Pastas do editor/IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Arquivos do sistema operacional
+Thumbs.db
+desktop.ini
+
+# Test Coverage
+coverage/
+
+# Configurações específicas de depuração e execução
+*.local
+*.sublime-workspace
+
+# Outras pastas ou arquivos gerados
+tmp/
+temp/
+out/
+
+# Arquivos do PM2 (process manager)
+pm2-log.log
+pids/
+*.pid
+*.seed
+
+# Arquivos de snapshots para testes
+__snapshots__/
+
+# Excluir binários
+*.exe
+*.dll
+*.so
+*.dylib
