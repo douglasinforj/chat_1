@@ -9,6 +9,7 @@ const loginInput = login.querySelector(".login_input")
 const chat = document.querySelector(".chat")
 const chatForm = chat.querySelector(".chat__form")
 const chatInput = chat.querySelector(".chat_input")
+const chatMesseges = chat.querySelector(".chat__messages")
 
 
 
@@ -45,10 +46,9 @@ const getRandomColor = () => {
 
 //Criando função que vai processar as mensagens
 const processMessage = ({ data }) => {
-    alert(data)
+    //alert(data)
+    console.log(data)
 }
-
-
 
 
 const handleSubmit = (event) => {
@@ -65,10 +65,41 @@ const handleSubmit = (event) => {
     websocket = new WebSocket("ws://localhost:8080")
     //processa a mensagem vindo do servidor:
     websocket.onmessage = processMessage
-
-
     console.log(user)                 //verificando
 }
 
-loginForm.addEventListener("submit", handleSubmit)   //evento clicar
+
+
+
+
+
+
+
+
+//Função para enviar a mensagem para o servidor:
+const sendMessage = (event) => {
+    event.preventDefault()
+
+    //Criando objetos para evniar ao servidor
+    const message = {
+        userId: user.id,
+        userName: user.name,
+        userColor: user.color,
+        content: chatInput.value
+    }
+
+    websocket.send(JSON.stringify(message))    //enviado a mensagem
+    
+    chatInput.value = ""    //limpando o input após enviar a mensagem
+
+}
+
+
+//Botão para login
+loginForm.addEventListener("submit", handleSubmit)   
+
+//Botão enviar mensagem para o servidor
+chatForm.addEventListener("submit", sendMessage)   
+
+
 
