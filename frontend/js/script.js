@@ -11,7 +11,7 @@ const chatForm = chat.querySelector(".chat__form")
 const chatInput = chat.querySelector(".chat_input")
 
 //capturando o atributo que vai receber as mensagens do chat
-const chatMesseges = chat.querySelector(".chat__messages")
+const chatMessages = chat.querySelector(".chat__messages")
 
 
 
@@ -38,7 +38,7 @@ let websocket
 
 
 //Função criando a mensagem no chat utilizando tags do html:
-const createMessageSelElement = (content) => {
+const createMessageSelfElement = (content) => {
     const div = document.createElement("div")
 
     div.classList.add("message--self")
@@ -46,6 +46,8 @@ const createMessageSelElement = (content) => {
 
     return div
 }
+
+
 
 
 
@@ -68,9 +70,9 @@ const processMessage = ({ data }) => {
     const { userId, userName, userColor, content } = JSON.parse(data)
 
     //chamando a função criada que vai receber o conteudo
-    const element = createMessageSelElement(content)
+    const element = createMessageSelfElement(content)
     //adicionando como filho
-    chatMesseges.appendChild(element)
+    chatMessages.appendChild(element)
 }
 
 
