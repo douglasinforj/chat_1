@@ -113,6 +113,8 @@ const processMessage = ({ data }) => {
     //TODO:chatMessages.appendChild(element)
 
     chatMessages.appendChild(message)
+
+    scrollScreen()
 }
 
 
