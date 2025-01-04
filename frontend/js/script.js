@@ -43,6 +43,12 @@ const getRandomColor = () => {
 }
 
 
+//Criando função que vai processar as mensagens
+const processMessage = ({ data }) => {
+    alert(data)
+}
+
+
 
 
 const handleSubmit = (event) => {
@@ -57,6 +63,8 @@ const handleSubmit = (event) => {
 
     //Criando conexão com servidor
     websocket = new WebSocket("ws://localhost:8080")
+    //processa a mensagem vindo do servidor:
+    websocket.onmessage = processMessage
 
 
     console.log(user)                 //verificando
