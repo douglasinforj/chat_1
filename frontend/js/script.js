@@ -80,6 +80,18 @@ const getRandomColor = () => {
     return colors[randomIndex]
 }
 
+//Criado função para scrollautomático havendo muitas mensagens:
+const scrollScreen = () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth"    //suavização
+    })
+}
+
+
+
+
+
 
 //Criando função que vai processar as mensagens
 const processMessage = ({ data }) => {
