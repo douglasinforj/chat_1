@@ -34,7 +34,7 @@ const handleSubmit = (event) => {
     user.id = crypto.randomUUID()            //Funcao do javascript para gerar ids
     user.name = loginInput.value            //Recuperando dados do campo name do usuário
     user.color = getRandomColor()           //Adicionando a função para sortear as cores
-    login.computedStyleMap.display = "none"  //Vai oculta o login
+    login.style.display = "none"  //Vai oculta o login
 
     console.log(user)                 //verificando
 }
