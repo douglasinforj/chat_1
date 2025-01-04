@@ -35,6 +35,18 @@ const colors = [
 let websocket
 
 
+//Função criando a mensagem no chat utilizando tags do html:
+const createMessageSelElement = (content) => {
+    const div = document.createElement("div")
+
+    div.classList.add("message--self")
+    div.innerHTML = content
+
+    return div
+}
+
+
+
 
 
 //Sortear cores para os usuários
