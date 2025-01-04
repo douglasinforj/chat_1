@@ -155,5 +155,24 @@ body {
 
 
 
+/*Estilizando mensagens dos outros usuários*/
+
+.message-other{
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 0px 10px 10px 10px;
+    align-self: flex-start;
+}
+/*nome de quem esta enviando*/
+.message--sender {   /*elemento controla o span*/
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: cadetblue;
+}
+
+
+
+
 
 
