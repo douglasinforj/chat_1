@@ -129,7 +129,13 @@ const handleSubmit = (event) => {
     chat.style.display = "flex"   //Vai mostrar Chat
 
     //Criando conexão com servidor
-    websocket = new WebSocket("ws://localhost:8080")
+    //websocket = new WebSocket("ws://localhost:8080")
+    websocket = new WebSocket("wss://chat-1-backend.onrender.com")     //wss é para https
+
+
+
+
+
     //processa a mensagem vindo do servidor:
     websocket.onmessage = processMessage
     console.log(user)                 //verificando
