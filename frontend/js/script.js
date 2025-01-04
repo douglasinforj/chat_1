@@ -1,9 +1,17 @@
 // Login
-
 //Buscando os elemento e armazenando em variáveis
 const login = document.querySelector(".login")
 const loginForm = login.querySelector(".login__form")
 const loginInput = login.querySelector(".login_input")
+
+// Chat Elements
+//Buscando os elemento e armazenando em variáveis
+const chat = document.querySelector(".chat")
+const chatForm = chat.querySelector(".chat__form")
+const chatInput = chat.querySelector(".chat_input")
+
+
+
 
 //Criando aributos do usuário, precisamos criar id
 const user = { id: "", name: "", color: ""}
@@ -35,6 +43,8 @@ const handleSubmit = (event) => {
     user.name = loginInput.value            //Recuperando dados do campo name do usuário
     user.color = getRandomColor()           //Adicionando a função para sortear as cores
     login.style.display = "none"  //Vai oculta o login
+
+    chat.style.display = "flex"   //Vai mostrar Chat
 
     console.log(user)                 //verificando
 }
