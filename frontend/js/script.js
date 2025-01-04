@@ -27,6 +27,15 @@ const colors = [
     "gold"
 ]
 
+
+
+
+//Variavel para websocket
+let websocket
+
+
+
+
 //Sortear cores para os usuários
 const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * colors.length)    //multiplicando pelo numero de cores no array
@@ -45,6 +54,10 @@ const handleSubmit = (event) => {
     login.style.display = "none"  //Vai oculta o login
 
     chat.style.display = "flex"   //Vai mostrar Chat
+
+    //Criando conexão com servidor
+    websocket = new WebSocket("ws://localhost:8080")
+
 
     console.log(user)                 //verificando
 }
