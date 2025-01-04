@@ -81,7 +81,6 @@ body {
 /* Sessão Chat*/
 
 .chat{
-    background-color: #555;
     width: 100%;
     height: 100%;
     display: flex;    /*dispoem lado a lado*/
@@ -90,8 +89,6 @@ body {
 }
 
 .chat__messages {
-    background-color: #777;
-    height: 500px;
     flex-grow: 1;
 }
 
