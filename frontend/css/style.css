@@ -132,7 +132,8 @@ body {
 
 /*Estilizando nossas mensagens enviadas 'balao de mensagens'*/
 
-.message--self{
+
+.chat__messages > div{     /*refatorando pois as mensagem dos outro usuário utilização as mesma estilizações*/
     padding: 10px;
     width: 100%;
     max-width: 250px;
@@ -140,6 +141,12 @@ body {
     font-weight: 500;
     margin-bottom: 15px;
     line-height: 22px;
+
+
+}
+
+.message--self{
+    
     background-color: #f2f2f2;
     color: #121212;
     border-radius: 10px 10px 0px 10px;     /*simula um balãozinho*/
