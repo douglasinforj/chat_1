@@ -78,7 +78,7 @@ body {
 }
 
 
-/* Sessão Chat*/
+/* ------------------Sessão Chat-------------------*/
 
 .chat{
     width: 100%;
@@ -90,6 +90,39 @@ body {
 
 .chat__messages {
     flex-grow: 1;
+}
+
+
+/*área de envio de mensagem pelo usuário*/
+.chat__form{
+    background-color: #191919;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.chat_input{
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;        /*faz o widget crescer na tela*/
+    background-color: #212121;
+    outline: none;
+    color: #f2f2f2;
+    font-size: 1rem;
+}
+.chat__button{
+    border: none;
+    background: none;
+    color: #f2f2f2;
+    cursor: pointer;
+}
+.chat__button > span {    /*tamanho do botão do span*/
+    font-size: 1.9rem;
 }
 
 
