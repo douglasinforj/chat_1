@@ -47,6 +47,27 @@ const createMessageSelfElement = (content) => {
     return div
 }
 
+//Função criando a mensagem no chat utilizando tags do html:
+
+const createMessageOtherElement = (content, sender, senderColor) => {
+    const div = document.createElement("div")
+    const span = document.createElement("span")
+
+    div.classList.add("message-other")
+
+    span.classList.add("message--sender")
+    span.style.color = senderColor
+
+    div.appendChild(span)    //colocando o span como filho da div
+
+    span.innerHTML = sender   //adicionando o nome de quem enviou a mensagem
+    div.innerHTML += content  // += vai acregar tudo que ja tem
+
+    return div
+}
+
+
+
 
 
 
@@ -69,8 +90,9 @@ const processMessage = ({ data }) => {
     //objetos
     const { userId, userName, userColor, content } = JSON.parse(data)
 
-    //chamando a função criada que vai receber o conteudo
-    const element = createMessageSelfElement(content)
+
+    const element = createMessageOtherElement(content, userName, userColor)
+    
     //adicionando como filho
     chatMessages.appendChild(element)
 }
