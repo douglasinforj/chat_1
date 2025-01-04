@@ -33,6 +33,7 @@ body {
     background-color: #212121;
     border-radius: 5px;
     padding: 20px;
+    display: none;      /* o login vai ficar oculto quando acessar o chat*/
 }
 
 .login > h2 {     /* >  tinge diretamento h2 dentro de login*/
