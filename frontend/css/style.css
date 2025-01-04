@@ -33,7 +33,7 @@ body {
     background-color: #212121;
     border-radius: 5px;
     padding: 20px;
-    display: none;      /* o login vai ficar oculto quando acessar o chat*/
+
 }
 
 .login > h2 {     /* >  tinge diretamento h2 dentro de login*/
@@ -83,7 +83,8 @@ body {
 .chat{
     width: 100%;
     height: 100%;
-    display: flex;    /*dispoem lado a lado*/
+    /*display: flex;   dispoem lado a lado*/
+    display: none;
     flex-direction: column;  /*dispom os elemento um acima do outro*/
     justify-content: space-between;   /*espaço entre os elementos*/
 }
