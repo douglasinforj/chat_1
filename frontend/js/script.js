@@ -46,8 +46,12 @@ const getRandomColor = () => {
 
 //Criando função que vai processar as mensagens
 const processMessage = ({ data }) => {
+    //TODO: Retirar o alert e o console.log
     //alert(data)
     console.log(JSON.parse(data))  //convertendo a string em objeto, para manusear os elemento
+
+    //objetos
+    const { userId, userName, userColor, content } = JSON.parse(data)
 }
 
 
