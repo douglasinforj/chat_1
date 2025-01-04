@@ -78,6 +78,25 @@ body {
 }
 
 
+/* Sessão Chat*/
+
+.chat{
+    background-color: #555;
+    width: 100%;
+    height: 100%;
+    display: flex;    /*dispoem lado a lado*/
+    flex-direction: column;  /*dispom os elemento um acima do outro*/
+    justify-content: space-between;   /*espaço entre os elementos*/
+}
+
+.chat__messages {
+    background-color: #777;
+    height: 500px;
+    flex-grow: 1;
+}
+
+
+
 
 
 
