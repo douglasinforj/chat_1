@@ -83,18 +83,24 @@ const getRandomColor = () => {
 
 //Criando função que vai processar as mensagens
 const processMessage = ({ data }) => {
-    //TODO: Retirar o alert e o console.log
-    //alert(data)
-    console.log(JSON.parse(data))  //convertendo a string em objeto, para manusear os elemento
-
+  
     //objetos
     const { userId, userName, userColor, content } = JSON.parse(data)
+    
+    //TODO:Retirar
+    //const element = createMessageOtherElement(content, userName, userColor)
+    
+    //Controlando o fluxo das mensagens, comparando com o id será chamada uma ou outra função
+    const message = 
+        userId == user.id
+            ? createMessageSelfElement(content)
+            : createMessageOtherElement(content, userName, userColor)
 
-
-    const element = createMessageOtherElement(content, userName, userColor)
     
     //adicionando como filho
-    chatMessages.appendChild(element)
+    //TODO:chatMessages.appendChild(element)
+
+    chatMessages.appendChild(message)
 }
 
 
