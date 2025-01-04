@@ -47,7 +47,7 @@ const getRandomColor = () => {
 //Criando função que vai processar as mensagens
 const processMessage = ({ data }) => {
     //alert(data)
-    console.log(data)
+    console.log(JSON.parse(data))  //convertendo a string em objeto, para manusear os elemento
 }
 
 
