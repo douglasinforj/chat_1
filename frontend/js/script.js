@@ -9,6 +9,8 @@ const loginInput = login.querySelector(".login_input")
 const chat = document.querySelector(".chat")
 const chatForm = chat.querySelector(".chat__form")
 const chatInput = chat.querySelector(".chat_input")
+
+//capturando o atributo que vai receber as mensagens do chat
 const chatMesseges = chat.querySelector(".chat__messages")
 
 
@@ -64,6 +66,11 @@ const processMessage = ({ data }) => {
 
     //objetos
     const { userId, userName, userColor, content } = JSON.parse(data)
+
+    //chamando a função criada que vai receber o conteudo
+    const element = createMessageSelElement(content)
+    //adicionando como filho
+    chatMesseges.appendChild(element)
 }
 
 
