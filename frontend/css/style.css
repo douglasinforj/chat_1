@@ -90,6 +90,10 @@ body {
 
 .chat__messages {
     flex-grow: 1;
+    padding: 30px 30px 90px;     /*aplicando limites na pagina*/
+    display: flex;               /*aplicando display*/
+    flex-direction: column;      /*alinhando em coluna*/
+    justify-content: flex-end;   /*colocando as mensagens no final*/
 }
 
 
@@ -125,6 +129,22 @@ body {
     font-size: 1.9rem;
 }
 
+
+/*Estilizando nossas mensagens enviadas 'balao de mensagens'*/
+
+.message--self{
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 22px;
+    background-color: #f2f2f2;
+    color: #121212;
+    border-radius: 10px 10px 0px 10px;     /*simula um balãozinho*/
+    align-self: flex-end;                  /*alinhando as mensagens a direita*/
+}
 
 
 
