@@ -10,7 +10,12 @@ Projeto de criação de chat online, com o intuido de entender inicialmente como
 - CSS
 - NODE
 - WS (WebSocket)
+
+## Funcionalidades
+- Login
 <img src="./telas_projeto/login.png">
+- Chat em grupo com quem se conectar
+<img src="./telas_projeto/conversar.png">
 
 ## Link do projeto
 
