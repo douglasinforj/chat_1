@@ -15,7 +15,7 @@ Projeto de criação de chat online, com o intuido de entender inicialmente como
 - Login
 <img src="./telas_projeto/login.png">
 - Chat em grupo com quem se conectar
-<img src="./telas_projeto/conversar.png">
+<img src="./telas_projeto/conversas.png">
 
 ## Link do projeto
 
